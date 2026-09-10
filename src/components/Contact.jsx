@@ -236,7 +236,7 @@ export default function Contact() {
               >
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_subject" value="New Portfolio Contact!" />
-                <input type="hidden" name="_next" value="http://localhost:5173/thank-you.html" />
+                <input type="hidden" name="_next" value="https://my-portfolio-hassan147-147.vercel.app/thank-you.html" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-slate mb-2">NAME</label>
