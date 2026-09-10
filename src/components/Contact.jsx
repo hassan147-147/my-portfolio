@@ -155,7 +155,7 @@ export default function Contact() {
                 <Sparkles size={18} className="text-cobalt-soft" />
                 <h3 className="font-display text-xl font-semibold text-paper">Send a message</h3>
               </div>
-              <p className="text-xs text-slate hidden sm:block">* First submission requires email confirmation</p>
+              <p className="text-xs text-slate hidden sm:block">* Email app will open automatically</p>
             </div>
 
             {activeTab === 'whatsapp' ? (
@@ -226,17 +226,22 @@ export default function Contact() {
               </form>
             ) : (
               <form
-                action="https://formsubmit.co/hassan16naveed@gmail.com"
-                method="POST"
-                onSubmit={() => {
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  const form = e.target
+                  const name = form.querySelector('[name="name"]').value
+                  const email = form.querySelector('[name="email"]').value
+                  const subject = form.querySelector('[name="subject"]').value
+                  const message = form.querySelector('[name="message"]').value
+                  const mailSubject = encodeURIComponent(`Portfolio Inquiry: ${subject}`)
+                  const mailBody = encodeURIComponent(`Hi Hassan,\n\nI'm ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`)
+                  window.location.href = `mailto:hassan16naveed@gmail.com?subject=${mailSubject}&body=${mailBody}`
                   setSubmitted(true)
                   setTimeout(() => setSubmitted(false), 4000)
+                  form.reset()
                 }}
                 className="space-y-5"
               >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Portfolio Contact!" />
-                <input type="hidden" name="_next" value="https://my-portfolio-hassan147-147.vercel.app/thank-you.html" />
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-medium text-slate mb-2">NAME</label>
@@ -300,7 +305,7 @@ export default function Contact() {
                 >
                   <CheckCircle size={18} className="text-emerald-400 flex-shrink-0" />
                   <p className="text-sm text-emerald-400">
-                    Message sent! Hassan will reply within 24h. Check your email for confirmation.
+                    Email app opened! Send the message and Hassan will reply within 24h.
                   </p>
                 </motion.div>
               )}
