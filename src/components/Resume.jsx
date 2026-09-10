@@ -9,7 +9,7 @@ const resumeData = {
   email: 'hassan16naveed@gmail.com',
   phone: '+92 319 2945394',
   location: 'Karachi, Pakistan',
-  summary: 'Prefcated Computer Science stumant with strong technical capablitios in front-end web developen, sotppoting responsive beoiding erploiees, in brotseco with strome particisioan rejeeis. Passioe ontomering wrotterfaces using HTML5, CSS3, and ojaec and techoating in MERN, Node.js, Express.js MongoUtl. Fecheooring ibe purvieil the React.js, Node.js, Express.js, and MERN te sontadine gofivare enforoine padties eopetfice tto cprojote wble conrobjmes whie ruploght blslogt education Science.',
+  summary: 'Motivated Computer Science student with strong technical capabilities in front-end web development, supporting responsive building and deployment projects. Passionate about creating interfaces using HTML5, CSS3, JavaScript, and React.js. Currently learning MERN stack technologies including Node.js, Express.js, and MongoDB. Eager to leverage React.js, Node.js, and modern web technologies to contribute to innovative software projects while pursuing education in Computer Science.',
   education: [
     { qualification: 'Intermediate (Computer Science)', board: 'Aptech - ADSE', location: 'Karachi, Pakistan', status: 'Batch 2024-2027' },
     { qualification: 'Matriculation (Computer Science)', board: 'Board of Secondary Education', location: 'Karachi, Pakistan', status: '75% (Grade A)' },
@@ -222,15 +222,15 @@ Phone: +92 319 2945394
 ───────────────────────────────────────────────────────────
                    PROFESSIONAL SUMMARY
 ───────────────────────────────────────────────────────────
-Prefcated Computer Science stumant with strong technical
-capablitios in front-end web developen, sotppoting responsive
-beoiding erploiees, in brotseco with strome particisioan
-rejeeis. Passioe ontomering wrotterfaces using HTML5, CSS3,
-and ojaec and techoating in MERN, Node.js, Express.js
-MongoUtl. Fecheooring ibe purvieil the React.js, Node.js,
-Express.js, and MERN te sontadine gofivare enforoine padties
-eopetfice tto cprojote wble conrobjmes whie ruploght blslogt
-education Science.
+Motivated Computer Science student with strong
+technical capabilities in front-end web development,
+supporting responsive building and deployment projects.
+Passionate about creating interfaces using HTML5, CSS3,
+JavaScript, and React.js. Currently learning MERN stack
+technologies including Node.js, Express.js, and MongoDB.
+Eager to leverage React.js, Node.js, and modern web
+technologies to contribute to innovative software projects
+while pursuing education in Computer Science.
 
 ───────────────────────────────────────────────────────────
                        EDUCATION
