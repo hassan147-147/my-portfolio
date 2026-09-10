@@ -25,7 +25,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="process" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function Process() {
         className="mb-16 max-w-xl"
       >
         <p className="font-mono text-sm text-amber mb-4">How it works</p>
-        <h2 className="font-display text-3xl sm:text-[2.6rem] leading-tight text-balance">
+        <h2 className="font-display text-2xl sm:text-[2.6rem] leading-tight text-balance">
           Four steps, no surprises.
         </h2>
       </motion.div>

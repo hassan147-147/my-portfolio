@@ -303,7 +303,7 @@ Software Engineering | Tech & Gaming
 
   return (
     <>
-      <section id="resume" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+      <section id="resume" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -312,7 +312,7 @@ Software Engineering | Tech & Gaming
           className="text-center max-w-2xl mx-auto"
         >
           <p className="font-mono text-sm text-amber mb-4">My Resume</p>
-          <h2 className="font-display text-3xl sm:text-[2.6rem] leading-tight text-balance mb-6">
+          <h2 className="font-display text-2xl sm:text-[2.6rem] leading-tight text-balance mb-6">
             Want to know more about me?
           </h2>
           <p className="text-slate text-lg leading-relaxed mb-10">

@@ -44,7 +44,7 @@ export default function Hero() {
       id="top"
       ref={ref}
       onMouseMove={handleMove}
-      className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16"
+      className="relative min-h-screen flex items-center overflow-hidden pt-24 sm:pt-28 pb-12 sm:pb-16"
     >
       {/* animated 3D grid floor */}
       <div
@@ -83,7 +83,7 @@ export default function Hero() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
 
-      <div className="relative max-w-6xl w-full mx-auto px-6 sm:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+      <div className="relative max-w-6xl w-full mx-auto px-5 sm:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-center">
         {/* Left: headline */}
         <div>
           <motion.div
@@ -105,7 +105,7 @@ export default function Hero() {
             </motion.p>
           </div>
 
-          <h1 className="font-display font-semibold text-[13vw] leading-[0.95] sm:text-[6.2rem] sm:leading-[0.92] tracking-tight text-balance" style={{ perspective: '800px' }}>
+          <h1 className="font-display font-semibold text-[11vw] leading-[0.95] sm:text-[6.2rem] sm:leading-[0.92] tracking-tight text-balance" style={{ perspective: '800px' }}>
             <span className="block overflow-hidden">
               <motion.span {...word('', 2.4)} className="block" style={{ transformOrigin: 'bottom' }}>
                 Building Digital
@@ -147,7 +147,7 @@ export default function Hero() {
               </span>
             </p>
 
-            <div className="flex items-center gap-4 mt-9">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-8 sm:mt-9">
               <MagneticButton
                 href="#projects"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-cobalt to-cobalt-soft text-paper text-sm font-medium transition-all hover:shadow-xl hover:shadow-cobalt/30"

@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="contact" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,10 +31,10 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         {/* Tabs */}
-        <div className="flex items-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12">
           <button
             onClick={() => setActiveTab('whatsapp')}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-medium transition-all ${
               activeTab === 'whatsapp'
                 ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25'
                 : 'bg-ink-soft border border-line text-slate hover:text-paper'
@@ -45,7 +45,7 @@ export default function Contact() {
           </button>
           <button
             onClick={() => setActiveTab('email')}
-            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-medium transition-all ${
               activeTab === 'email'
                 ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25'
                 : 'bg-ink-soft border border-line text-slate hover:text-paper'
@@ -155,7 +155,7 @@ export default function Contact() {
                 <Sparkles size={18} className="text-cobalt-soft" />
                 <h3 className="font-display text-xl font-semibold text-paper">Send a message</h3>
               </div>
-              <p className="text-xs text-slate">* First submission requires email confirmation</p>
+              <p className="text-xs text-slate hidden sm:block">* First submission requires email confirmation</p>
             </div>
 
             {activeTab === 'whatsapp' ? (

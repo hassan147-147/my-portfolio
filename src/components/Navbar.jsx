@@ -96,7 +96,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 sm:px-8 h-18 py-4">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 h-16 sm:h-18 py-4">
         <ProfessionalLogo />
 
         <div className="hidden md:flex items-center gap-1">

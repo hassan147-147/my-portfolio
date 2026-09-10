@@ -36,7 +36,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="services" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function Services() {
         className="mb-16 max-w-xl"
       >
         <p className="font-mono text-sm text-amber mb-4">What I Do</p>
-        <h2 className="font-display text-3xl sm:text-[2.6rem] leading-tight text-balance">
+        <h2 className="font-display text-2xl sm:text-[2.6rem] leading-tight text-balance">
           Services I can help you with.
         </h2>
       </motion.div>

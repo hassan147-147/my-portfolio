@@ -51,7 +51,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="projects" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function Projects() {
         >
           Selected Work
         </motion.p>
-        <h2 className="font-display text-3xl sm:text-[2.6rem] leading-tight text-balance">
+        <h2 className="font-display text-2xl sm:text-[2.6rem] leading-tight text-balance">
           A few projects worth a closer look.
         </h2>
       </motion.div>

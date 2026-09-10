@@ -64,7 +64,7 @@ function SkillBar({ name, level, color, delay }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="skills" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Skills() {
         transition={{ duration: 0.6 }}
         className="mb-16"
       >
-        <h2 className="font-display text-4xl sm:text-5xl font-semibold">
+        <h2 className="font-display text-3xl sm:text-5xl font-semibold">
           Tech stack
         </h2>
       </motion.div>

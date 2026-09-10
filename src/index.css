@@ -26,10 +26,14 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   cursor: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
 }
 
 @media (max-width: 768px) {
-  body { cursor: auto; }
+  body { cursor: auto; touch-action: manipulation; }
+  * { -webkit-tap-highlight-color: transparent; }
 }
 
 a, button, [data-hover] {
@@ -38,6 +42,11 @@ a, button, [data-hover] {
 
 @media (max-width: 768px) {
   a, button, [data-hover] { cursor: pointer; }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -144,6 +153,18 @@ a, button, [data-hover] {
 
 @media (max-width: 640px) {
   .grid-floor { animation: none; }
+}
+
+@media (max-width: 768px) {
+  *, *::before, *::after {
+    scroll-behavior: smooth;
+  }
+  .perspective {
+    perspective: none;
+  }
+  .preserve-3d {
+    transform-style: flat;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -15,7 +15,7 @@ import BackToTop from './components/BackToTop'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-ink text-paper selection:bg-cobalt relative cursor-none md:cursor-none">
+    <div className="min-h-screen bg-ink text-paper selection:bg-cobalt relative cursor-auto md:cursor-none">
       <LoadingScreen />
       <CustomCursor />
       <ScrollProgress />

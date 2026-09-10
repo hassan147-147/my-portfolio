@@ -46,115 +46,121 @@ export default function Background3D() {
         </motion.div>
       </motion.div>
 
-      {/* Floating 3D cubes */}
-      <motion.div
-        className="absolute top-[15%] left-[8%] w-16 h-16 opacity-40"
-        style={{ y: y2 }}
-        animate={{
-          rotateX: [0, 360],
-          rotateY: [0, 360],
-          y: [0, -20, 0],
-        }}
-        transition={{
-          rotateX: { duration: 20, repeat: Infinity, ease: 'linear' },
-          rotateY: { duration: 15, repeat: Infinity, ease: 'linear' },
-          y: { duration: 5, repeat: Infinity, ease: 'easeInOut' },
-        }}
-      >
-        <div className="w-full h-full bg-gradient-to-br from-cobalt/30 to-purple-500/20 border border-cobalt/20 rounded-lg backdrop-blur-sm" 
-          style={{ transformStyle: 'preserve-3d', transform: 'rotateX(45deg) rotateZ(45deg)' }} />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[25%] right-[12%] w-12 h-12 opacity-30"
-        style={{ y: y3 }}
-        animate={{
-          rotateX: [360, 0],
-          rotateZ: [0, 360],
-          y: [0, 15, 0],
-        }}
-        transition={{
-          rotateX: { duration: 18, repeat: Infinity, ease: 'linear' },
-          rotateZ: { duration: 12, repeat: Infinity, ease: 'linear' },
-          y: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 },
-        }}
-      >
-        <div className="w-full h-full bg-gradient-to-br from-amber/20 to-cobalt/20 border border-amber/20 rounded-md backdrop-blur-sm"
-          style={{ transformStyle: 'preserve-3d', transform: 'rotateX(60deg) rotateZ(30deg)' }} />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-[30%] left-[15%] w-10 h-10 opacity-25"
-        animate={{
-          rotateY: [0, 360],
-          rotateZ: [360, 0],
-          y: [0, -12, 0],
-        }}
-        transition={{
-          rotateY: { duration: 14, repeat: Infinity, ease: 'linear' },
-          rotateZ: { duration: 10, repeat: Infinity, ease: 'linear' },
-          y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 },
-        }}
-      >
-        <div className="w-full h-full bg-gradient-to-br from-emerald-400/20 to-cobalt/20 border border-emerald-400/20 rounded-sm backdrop-blur-sm"
-          style={{ transformStyle: 'preserve-3d', transform: 'rotateX(30deg) rotateZ(60deg)' }} />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-[20%] right-[8%] w-20 h-20 opacity-20"
-        style={{ y: y2 }}
-        animate={{
-          rotateX: [0, 360],
-          rotateY: [360, 0],
-          y: [0, -25, 0],
-        }}
-        transition={{
-          rotateX: { duration: 25, repeat: Infinity, ease: 'linear' },
-          rotateY: { duration: 20, repeat: Infinity, ease: 'linear' },
-          y: { duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 },
-        }}
-      >
-        <div className="w-full h-full bg-gradient-to-br from-cobalt-soft/15 to-purple-500/15 border border-cobalt-soft/15 rounded-xl backdrop-blur-sm"
-          style={{ transformStyle: 'preserve-3d', transform: 'rotateX(45deg) rotateZ(20deg)' }} />
-      </motion.div>
-
-      {/* Floating particles */}
-      {[...Array(8)].map((_, i) => (
+      {/* Floating 3D cubes - hidden on mobile for performance */}
+      <div className="hidden sm:block">
         <motion.div
-          key={i}
-          className="absolute w-1 h-1 rounded-full bg-cobalt-soft/40"
-          style={{
-            left: `${10 + i * 12}%`,
-            top: `${20 + (i % 3) * 25}%`,
-          }}
+          className="absolute top-[15%] left-[8%] w-16 h-16 opacity-40"
+          style={{ y: y2 }}
           animate={{
-            y: [0, -30 - i * 5, 0],
-            x: [0, (i % 2 ? 10 : -10), 0],
-            opacity: [0.2, 0.6, 0.2],
-            scale: [0.5, 1.2, 0.5],
+            rotateX: [0, 360],
+            rotateY: [0, 360],
+            y: [0, -20, 0],
           }}
           transition={{
-            duration: 4 + i * 0.5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: i * 0.3,
+            rotateX: { duration: 20, repeat: Infinity, ease: 'linear' },
+            rotateY: { duration: 15, repeat: Infinity, ease: 'linear' },
+            y: { duration: 5, repeat: Infinity, ease: 'easeInOut' },
           }}
-        />
-      ))}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-cobalt/30 to-purple-500/20 border border-cobalt/20 rounded-lg backdrop-blur-sm" 
+            style={{ transformStyle: 'preserve-3d', transform: 'rotateX(45deg) rotateZ(45deg)' }} />
+        </motion.div>
 
-      {/* Animated lines */}
-      <motion.div
-        className="absolute top-0 left-1/4 w-px h-full opacity-10"
-        style={{ y: y2 }}
-      >
-        <div className="w-full h-full bg-gradient-to-b from-transparent via-cobalt-soft to-transparent" />
-      </motion.div>
-      <motion.div
-        className="absolute top-0 right-1/3 w-px h-full opacity-10"
-        style={{ y: y3 }}
-      >
-        <div className="w-full h-full bg-gradient-to-b from-transparent via-amber to-transparent" />
-      </motion.div>
+        <motion.div
+          className="absolute top-[25%] right-[12%] w-12 h-12 opacity-30"
+          style={{ y: y3 }}
+          animate={{
+            rotateX: [360, 0],
+            rotateZ: [0, 360],
+            y: [0, 15, 0],
+          }}
+          transition={{
+            rotateX: { duration: 18, repeat: Infinity, ease: 'linear' },
+            rotateZ: { duration: 12, repeat: Infinity, ease: 'linear' },
+            y: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 },
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-amber/20 to-cobalt/20 border border-amber/20 rounded-md backdrop-blur-sm"
+            style={{ transformStyle: 'preserve-3d', transform: 'rotateX(60deg) rotateZ(30deg)' }} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[30%] left-[15%] w-10 h-10 opacity-25"
+          animate={{
+            rotateY: [0, 360],
+            rotateZ: [360, 0],
+            y: [0, -12, 0],
+          }}
+          transition={{
+            rotateY: { duration: 14, repeat: Infinity, ease: 'linear' },
+            rotateZ: { duration: 10, repeat: Infinity, ease: 'linear' },
+            y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 },
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-emerald-400/20 to-cobalt/20 border border-emerald-400/20 rounded-sm backdrop-blur-sm"
+            style={{ transformStyle: 'preserve-3d', transform: 'rotateX(30deg) rotateZ(60deg)' }} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[20%] right-[8%] w-20 h-20 opacity-20"
+          style={{ y: y2 }}
+          animate={{
+            rotateX: [0, 360],
+            rotateY: [360, 0],
+            y: [0, -25, 0],
+          }}
+          transition={{
+            rotateX: { duration: 25, repeat: Infinity, ease: 'linear' },
+            rotateY: { duration: 20, repeat: Infinity, ease: 'linear' },
+            y: { duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 2 },
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-cobalt-soft/15 to-purple-500/15 border border-cobalt-soft/15 rounded-xl backdrop-blur-sm"
+            style={{ transformStyle: 'preserve-3d', transform: 'rotateX(45deg) rotateZ(20deg)' }} />
+        </motion.div>
+      </div>
+
+      {/* Floating particles - reduced on mobile */}
+      <div className="hidden sm:block">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-cobalt-soft/40"
+            style={{
+              left: `${10 + i * 12}%`,
+              top: `${20 + (i % 3) * 25}%`,
+            }}
+            animate={{
+              y: [0, -30 - i * 5, 0],
+              x: [0, (i % 2 ? 10 : -10), 0],
+              opacity: [0.2, 0.6, 0.2],
+              scale: [0.5, 1.2, 0.5],
+            }}
+            transition={{
+              duration: 4 + i * 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.3,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Animated lines - hidden on mobile for performance */}
+      <div className="hidden sm:block">
+        <motion.div
+          className="absolute top-0 left-1/4 w-px h-full opacity-10"
+          style={{ y: y2 }}
+        >
+          <div className="w-full h-full bg-gradient-to-b from-transparent via-cobalt-soft to-transparent" />
+        </motion.div>
+        <motion.div
+          className="absolute top-0 right-1/3 w-px h-full opacity-10"
+          style={{ y: y3 }}
+        >
+          <div className="w-full h-full bg-gradient-to-b from-transparent via-amber to-transparent" />
+        </motion.div>
+      </div>
     </div>
   )
 }

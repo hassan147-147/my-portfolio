@@ -43,7 +43,7 @@ const education = [
 
 export default function About() {
   return (
-    <section id="about" className="max-w-6xl mx-auto px-6 sm:px-8 py-28 sm:py-36">
+    <section id="about" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-36">
       <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 lg:gap-24">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -60,7 +60,7 @@ export default function About() {
           >
             About Me
           </motion.p>
-          <h2 className="font-display text-3xl sm:text-[2.6rem] leading-tight text-balance mb-6">
+          <h2 className="font-display text-2xl sm:text-[2.6rem] leading-tight text-balance mb-6">
             Building digital experiences with passion and precision.
           </h2>
           <motion.div
